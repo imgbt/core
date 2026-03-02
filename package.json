@@ -1,0 +1,42 @@
+{
+  "name": "@imgbt/core",
+  "version": "0.1.0",
+  "description": "TypeScript SDK for imgbt — upload, transform, and deliver media assets",
+  "type": "module",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./dist/index.d.ts",
+        "default": "./dist/index.js"
+      },
+      "require": {
+        "types": "./dist/index.d.cts",
+        "default": "./dist/index.cjs"
+      }
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json",
+    "typecheck": "tsc --noEmit",
+    "clean": "rm -rf dist"
+  },
+  "keywords": [
+    "imgbt",
+    "image",
+    "media",
+    "cdn",
+    "sdk",
+    "typescript"
+  ],
+  "author": "imgbt",
+  "license": "MIT",
+  "devDependencies": {
+    "typescript": "^5.4.5"
+  }
+}
